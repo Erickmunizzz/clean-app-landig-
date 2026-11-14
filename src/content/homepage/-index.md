@@ -1,15 +1,15 @@
 ---
 banner:
-  title: "The All-In-One Growth Software for <strong>Local Business Owners</strong>"
-  content: "The complete automated system designed to capture more leads, follow up instantly, and grow your local business - all in one place."
+  title: "O Sistema Definitivo para <strong>Gerenciar e Escalar sua Empresa de Limpeza</strong>"
+  content: "Automatize agendamentos, rastreie equipes em tempo real com GPS, gerencie pagamentos via Stripe e ofereça um portal exclusivo para seus clientes — tudo em uma única plataforma."
   button_primary:
     enable: true
-    label: "Start Your 14-day Free Trial"
-    link: "/pricing"
+    label: "Começar Teste Gratuito de 14 Dias"
+    link: "https://cleanmaapp.com/admin/login"
   button_secondary:
     enable: true
-    label: "Book a Demo"
-    link: "/contact"
+    label: "Ver Demonstração"
+    link: "#videoPlayer"
 
 main_features:
   enable: true

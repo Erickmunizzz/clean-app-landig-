@@ -1,28 +1,20 @@
 {
   "main": [
     {
-      "name": "Features",
-      "url": "/features"
+      "name": "Recursos",
+      "url": "/#features"
     },
     {
-      "name": "Pricing",
-      "url": "/pricing"
+      "name": "Planos",
+      "url": "/#pricing"
     },
     {
-      "name": "Blog",
-      "url": "/blog"
+      "name": "Perguntas frequentes",
+      "url": "/#faq"
     },
     {
-      "name": "Integrations",
-      "url": "/integrations"
-    },
-    {
-      "name": "Case Studies",
-      "url": "/case-study"
-    },
-    {
-      "name": "Contact",
-      "url": "/contact"
+      "name": "Ver Demonstração",
+      "url": "/#videoPlayer"
     }
   ],
   "footer_col_1_title": "Primary",

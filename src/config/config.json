@@ -1,14 +1,14 @@
 {
   "site": {
-    "title": "Automark",
-    "base_url": "https://automark-astro.vercel.app",
+    "title": "CleanMa",
+    "base_url": "https://cleanmaapp.com",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.svg",
     "logo_width": "160",
     "logo_height": "45",
-    "logo_text": "Automark"
+    "logo_text": "CleanMa"
   },
   "settings": {
     "sticky_header": true
@@ -24,16 +24,16 @@
   },
   "navigation_button": {
     "enable": true,
-    "label": "Get This Template",
-    "link": "https://themefisher.com/products/automark-astro?aff=utm_source=themewagon&utm_medium=automark-template&utm_campaign=theme-download"
+    "label": "Começar Teste Gratuito de 14 Dias",
+    "link": "https://cleanmaapp.com/admin/login"
   },
   "google_tag_manager": {
     "enable": false,
     "gtm_id": "GTM-XXXXXX"
   },
   "metadata": {
-    "meta_author": "Automark",
+    "meta_author": "CleanMa",
     "meta_image": "/images/og-image.png",
-    "meta_description": "The all-in-one marketing and sales automation platform"
+    "meta_description": "Gerencie e escale sua empresa de limpeza com agendamentos, equipes com GPS, pagamentos e portal do cliente no CleanMa."
   }
 }
