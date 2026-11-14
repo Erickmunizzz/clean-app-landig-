@@ -8,7 +8,12 @@ import type { Homepage } from "@/types";
 const homepage = await getListPage("homepage", "-index");
 const homepageData: Homepage = homepage.data;
 ---
-<Base hideFooter={true}>
+<Base
+  hideFooter={true}
+  title="CleanMa — Cleaning Business Management Software UK"
+  description="Automate your UK cleaning business with CleanMa. Manage schedules and teams, track GPS check-ins, automate payments and give clients a dedicated portal."
+  canonical="https://cleanmaapp.com/"
+>
   <!-- Banner -->
   <section class="section-ph relative overflow-hidden">
     <div class="container relative">

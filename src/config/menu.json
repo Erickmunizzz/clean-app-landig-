@@ -15,6 +15,10 @@
     {
       "name": "Ver Demonstração",
       "url": "/#videoPlayer"
+    },
+    {
+      "name": "Login",
+      "url": "https://cleanmaapp.com/admin/login"
     }
   ],
   "footer_col_1_title": "Primary",
