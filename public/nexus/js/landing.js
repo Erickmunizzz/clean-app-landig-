@@ -16,7 +16,7 @@ document.getElementById('ptog').addEventListener('change', function() {
     document.getElementById('ptogThumb').style.transform = y ? 'translateX(24px)' : 'translateX(0)';
     document.querySelectorAll('.pv').forEach(el => el.textContent = y ? el.dataset.y : el.dataset.m);
     document.querySelectorAll('.pper').forEach(el => {
-        el.textContent = y ? 'por mês, cobrança anual, sem desconto' : 'por mês, cobrança mensal';
+        el.textContent = y ? 'por ano, cobrança anual (12 meses)' : 'por mês, cobrança mensal';
     });
 });
 

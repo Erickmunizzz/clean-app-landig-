@@ -4,7 +4,6 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import vercel from "@astrojs/vercel";
 import tailwindcss from "@tailwindcss/vite";
-import AutoImport from "astro-auto-import";
 import { defineConfig, fontProviders } from "astro/config";
 import remarkCollapse from "remark-collapse";
 import remarkToc from "remark-toc";
@@ -55,27 +54,30 @@ export default defineConfig({
   base: config.site.base_path ? config.site.base_path : "/",
   trailingSlash: config.site.trailing_slash ? "always" : "never",
   image: { service: sharp(), dangerouslyProcessSVG: true },
-  vite: { plugins: [tailwindcss()] },
+  vite: {
+    plugins: [tailwindcss()],
+    build: {
+      rolldownOptions: {
+        onwarn(warning, warn) {
+          // Astro consumes this internal asset-propagation marker before bundling.
+          // Preserve every other warning, including other module directives.
+          if (warning.code === "MODULE_LEVEL_DIRECTIVE" &&
+              warning.message.includes('"use astro:head-inject"')) return;
+          warn(warning);
+        },
+      },
+    },
+  },
   fonts: fontsConfig,
   integrations: [
     react(),
     sitemap(),
-    AutoImport({
-      imports: [
-        "@/shortcodes/Button",
-        "@/shortcodes/Accordion",
-        "@/shortcodes/Notice",
-        "@/shortcodes/Video",
-        // "@/shortcodes/Youtube",
-        "@/shortcodes/Tabs",
-        "@/shortcodes/Tab",
-      ],
-    }),
     mdx(),
   ],
   markdown: {
-    processor: unified(),
-    remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of contents" }]],
+    processor: unified({
+      remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of contents" }]],
+    }),
     shikiConfig: { theme: "one-dark-pro", wrap: true },
   },
 });

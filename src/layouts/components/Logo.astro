@@ -18,7 +18,7 @@ const {
 } = config.site;
 ---
 
-<a href="/" class="navbar-brand inline-block">
+<a href="/" class="navbar-brand inline-flex items-center gap-2">
   {
     src || logo ? (
       <>
@@ -34,6 +34,7 @@ const {
           }}
           format="webp"
         />
+        <span class="font-bold text-text-dark">{logo_text}</span>
       </>
     ) : logo_text ? (
       logo_text

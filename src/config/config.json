@@ -4,9 +4,9 @@
     "base_url": "https://cleanmaapp.com",
     "base_path": "/",
     "trailing_slash": false,
-    "favicon": "/images/cleanma-icon.svg",
-    "logo": "/images/cleanma-logo.svg",
-    "logo_width": "160",
+    "favicon": "/images/cleanma-favicon.png",
+    "logo": "/images/cleanma-official.png",
+    "logo_width": "83",
     "logo_height": "45",
     "logo_text": "CleanMa"
   },

@@ -53,3 +53,6 @@ h1, h2, h3, h4, h5, h6, strong { color: #0f172a; }
 .nexus-sections .bdot { background: #2563eb; box-shadow: 0 0 8px rgb(37 99 235 / 30%); }
 .nexus-sections #foot { background-color: #fff; }
 .nexus-sections .tav { background: #eff6ff; }
+
+/* Keep the billing selector keyboard-visible without changing its animation. */
+#ptog:focus-visible + label { outline: 2px solid #1d4ed8; outline-offset: 4px; }
