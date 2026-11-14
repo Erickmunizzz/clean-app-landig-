@@ -11,3 +11,10 @@ Original reference is retained in referencia-nexusai. Main Automark footer is di
 Dependency resolution uses legacy-peer-deps for the supplied Astro integration peer ranges; package-lock.json records the installed versions. Stripe API version literals were aligned to the installed SDK type to resolve existing template TypeScript errors. No payment credentials or backend setup were added.
 
 Validation: npm run build passed; npm run check returned 0 errors, 0 warnings and 7 existing hints. Source comparison confirms the Hero/video markup, GSAP/Lenis scripts, animation styles and Nexus reveal/aurora wrappers are unchanged. Automated browser launch was blocked by the environment, so visual/mobile verification remains pending.
+
+
+## CleanMa light theme and domain routing
+
+The corporate white/blue skin is in `src/styles/cleanma.css`; Tailwind tokens are in `src/config/theme.json`. Existing reveal, hover, GSAP/Lenis, Bootstrap collapse and video behaviours remain in their original files. Particles retain their original motion and now use blue for contrast on white. Header/footer use the CleanMa check/sparkle SVG mark. Template credits are absent from the rendered footer; upstream license files remain in the repository.
+
+The `cleanma-landing` Vercel project hosts the landing independently. On the `cleanmaapp` Vercel project, project-level routing rewrites only `/` and the landing's asset prefixes (`/_astro/`, `/nexus/`, `/images/`, `/scripts/`, `/showcase.mp4`) to `https://cleanma-landing.vercel.app`. The app's `/admin`, `/admin/login`, `/assets` and other routes retain their original deployment. These project routes are managed in Vercel CDN Routing and do not require a rebuild of the app. Do not move the custom domain to the landing project.

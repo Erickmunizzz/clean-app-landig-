@@ -19,3 +19,6 @@
   @import "./navigation.css";
   @import "./buttons.css";
 }
+
+/* CleanMa colour skin; original layout and animation definitions stay intact. */
+@import "./cleanma.css";

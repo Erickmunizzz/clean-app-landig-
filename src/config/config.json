@@ -4,8 +4,8 @@
     "base_url": "https://cleanmaapp.com",
     "base_path": "/",
     "trailing_slash": false,
-    "favicon": "/images/favicon.png",
-    "logo": "/images/logo.svg",
+    "favicon": "/images/cleanma-icon.svg",
+    "logo": "/images/cleanma-logo.svg",
     "logo_width": "160",
     "logo_height": "45",
     "logo_text": "CleanMa"
@@ -17,10 +17,10 @@
     "contact_form_action": "#",
     "checklist_form_action": "#",
     "apply_form_action": "#",
-    "copyright": "Copyright &copy; 2026 <strong><a target=\"_blank\" href=\"https://themefisher.com/\">Themefisher</a></strong> All Rights Reserved &bull; Distributed by <strong><a target=\"_blank\" href=\"https://themewagon.com/\">ThemeWagon</a></strong>",
-    "footer_tagline": "Empowering Marketing businesses through intelligent automation.",
-    "footer_email": "contact@Automark.com",
-    "footer_phone": "(+1) 165-320-0102"
+    "copyright": "© 2026 CleanMa. All rights reserved.",
+    "footer_tagline": "Cleaning business management software for UK teams.",
+    "footer_email": "",
+    "footer_phone": ""
   },
   "navigation_button": {
     "enable": true,

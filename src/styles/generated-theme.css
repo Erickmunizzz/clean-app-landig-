@@ -6,16 +6,16 @@
 
 @theme {
   /* === Colors === */
-  --color-primary: #937AFF;
-  --color-primary-light: #4D36D0;
-  --color-secondary: #FF5353;
-  --color-body: #03010E;
-  --color-border: #202128;
-  --color-light: #0B0C17;
-  --color-dark: #040404;
-  --color-text: #DAD4DE;
-  --color-text-dark: #817E84;
-  --color-text-light: #E5E5E5;
+  --color-primary: #2563EB;
+  --color-primary-light: #1D4ED8;
+  --color-secondary: #2563EB;
+  --color-body: #FFFFFF;
+  --color-border: #E2E8F0;
+  --color-light: #F4F8FD;
+  --color-dark: #0F172A;
+  --color-text: #475569;
+  --color-text-dark: #0F172A;
+  --color-text-light: #475569;
 
   /* === Font Families === */
   --font-primary: Inter Tight, sans-serif;
