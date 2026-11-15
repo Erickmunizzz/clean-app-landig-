@@ -21,61 +21,37 @@
       "url": "https://cleanmaapp.com/admin/login"
     }
   ],
-  "footer_col_1_title": "Product",
-  "footer_col_2_title": "Solutions",
-  "footer_col_3_title": "CleanMa",
+  "footer_col_1_title": "SUPPORT",
+  "footer_col_2_title": "THE COMPANY",
+  "footer_col_3_title": "CLEANMA CONTACT",
   "footer_primary": [
     {
-      "name": "Features",
+      "name": "User Guides",
       "url": "/#features"
-    },
-    {
-      "name": "Starter",
-      "url": "/#pricing"
-    },
-    {
-      "name": "Growth",
-      "url": "/#pricing"
-    },
-    {
-      "name": "Scale",
-      "url": "/#pricing"
-    },
-    {
-      "name": "View Demo",
-      "url": "/#videoPlayer"
-    }
-  ],
-  "footer_resource": [
-    {
-      "name": "Operations & Scheduling",
-      "url": "/#features"
-    },
-    {
-      "name": "The Cleaner App",
-      "url": "/#cleaner-app"
-    },
-    {
-      "name": "Client Portal",
-      "url": "/#features"
-    },
-    {
-      "name": "Payments & Billing",
-      "url": "/#integrations"
-    }
-  ],
-  "footer_legal": [
-    {
-      "name": "The Story",
-      "url": "/#hero"
     },
     {
       "name": "Contact Support",
       "url": "mailto:support@cleanma.com,contact@cleanma.com"
     },
     {
-      "name": "Login",
-      "url": "https://cleanmaapp.com/admin/login"
+      "name": "Start Guide",
+      "url": "/#videoPlayer"
+    }
+  ],
+  "footer_resource": [
+    {
+      "name": "The Story",
+      "url": "/#hero"
+    }
+  ],
+  "footer_legal": [
+    {
+      "name": "contact@cleanma.com",
+      "url": "mailto:contact@cleanma.com"
+    },
+    {
+      "name": "support@cleanma.com",
+      "url": "mailto:support@cleanma.com"
     }
   ]
 }
