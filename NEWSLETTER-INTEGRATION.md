@@ -1,8 +1,8 @@
 # CleanMa newsletter and English landing
 
-The landing uses English (en-GB) across its pages, shared navigation, footer and client-side messages. BRL prices and annual amounts remain as explicitly requested by the owner.
+The landing uses English (en-GB) across its pages, shared navigation, footer and client-side messages. Landing pricing and the savings calculator now use GBP with UK number formatting. Monthly plans are £89.99, £179.99 and £299.99; annual totals retain the requested 14% offer (£928.70, £1,857.50 and £3,095.90).
 
-Footer columns: SUPPORT (User Guides, Contact Support, Start Guide), THE COMPANY (The Story), CLEANMA CONTACT (individual email links). Contact Support opens one message addressed to both support@cleanma.com and contact@cleanma.com. Anchors point to the homepage features, demo video and hero. Existing layout classes and animations are retained. The requested trust/uptime block is removed.
+Footer columns are now Product, Solutions and CleanMa, with plan links and navigation to the cleaner app, features, demo, hero and login. Contact Support opens one message addressed to support@cleanma.com and contact@cleanma.com. The newsletter form and its script were removed from the footer at the owner’s request. Existing stored contacts and backend remain intact. A five-card Cleaner App section follows Features and uses the existing scroll reveal animation. Existing layout classes and animations are retained. The requested trust/uptime block is removed.
 
 ## Backend activation — 15 November 2026
 

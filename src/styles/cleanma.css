@@ -151,3 +151,9 @@ h1, h2, h3, h4, h5, h6, strong { color: #0f172a; }
 .nexus-sections .cma-lead-status[data-state="success"] { color: #166534; padding: 12px; border: 1px solid #bbf7d0; background: #f0fdf4; border-radius: 10px; }
 .nexus-sections .cma-lead-status[data-state="error"] { color: #b91c1c; }
 .nexus-sections .cma-newsletter button:disabled { opacity: .65; cursor: wait; }
+
+/* The Cleaner App follows the existing cards and scroll reveal system. */
+.nexus-sections .cma-cleaner-app { background: #fff; }
+.nexus-sections .cma-cleaner-card { background: #fff; border: 1px solid #e2e8f0; box-shadow: 0 4px 20px rgb(15 23 42 / 4%); }
+.nexus-sections .cma-cleaner-icon { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; margin-bottom: 20px; border-radius: 12px; color: #2563eb; background: #eff6ff; }
+.nexus-sections .cma-cleaner-card p { margin-bottom: 0; font-size: .875rem; line-height: 1.7; color: #475569; }

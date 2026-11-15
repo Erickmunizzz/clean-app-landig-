@@ -12,7 +12,7 @@ document.querySelectorAll('.rv').forEach(el => rvObs.observe(el));
 
 /* PRICING PERIOD: display and navigation use the same selected interval. */
 let billingInterval = 'month';
-const priceFormat = new Intl.NumberFormat('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+const priceFormat = new Intl.NumberFormat('en-GB', {minimumFractionDigits: 2, maximumFractionDigits: 2});
 function selectBilling(interval) {
     billingInterval = interval;
     const yearly = interval === 'year';
