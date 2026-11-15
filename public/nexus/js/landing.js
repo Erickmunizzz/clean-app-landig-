@@ -24,7 +24,7 @@ function selectBilling(interval) {
     document.querySelectorAll('#pricing .pcard').forEach(card => {
         const price = card.querySelector('.pv');
         price.textContent = priceFormat.format(Number(yearly ? price.dataset.yCents : price.dataset.mCents) / 100);
-        card.querySelector('.pper').textContent = yearly ? '/ ano' : '/ mês';
+        card.querySelector('.pper').textContent = yearly ? '/ year' : '/ month';
         card.querySelector('.cma-old-price').hidden = !yearly;
         card.querySelector('.cma-annual-detail').hidden = !yearly;
     });

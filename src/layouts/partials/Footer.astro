@@ -1,11 +1,9 @@
 ---
-import Social from "@/components/Social.astro";
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
-import social from "@/config/social.json";
 import ImageMod from "@/layouts/components/ImageMod.astro";
 import { markdownify } from "@/lib/utils/textConverter";
-import type { Menu, SocialType } from "@/types";
+import type { Menu } from "@/types";
 
 const {
   footer_primary,
@@ -15,7 +13,7 @@ const {
   footer_col_2_title,
   footer_col_3_title,
 } = menu as Menu;
-const { main: socialLinks } = social as SocialType;
+
 ---
 
 <footer class="section pb-0 relative overflow-hidden">
@@ -24,21 +22,14 @@ const { main: socialLinks } = social as SocialType;
       <!-- Column 1 - Logo & Contact -->
       <div class="max-w-95 mb-20 text-lg text-text">
         <ImageMod
-          src="/images/logo.svg"
+          src="/images/cleanma-official.png"
           width={156}
           height={50}
           class="h-12.5"
-          alt="logo"
+          alt="CleanMa"
         />
         <p class="mt-6">{config.params.footer_tagline}</p>
-        <a
-          class="link mt-6 inline-block underline"
-          href={`mailto:${config.params.footer_email}`}
-          >{config.params.footer_email}</a
-        >
-        <a class="link mt-4 block" href={`tel:${config.params.footer_phone}`}
-          >{config.params.footer_phone}</a
-        >
+
       </div>
       <!-- Column 2 - Primary -->
       <div>
@@ -100,7 +91,7 @@ const { main: socialLinks } = social as SocialType;
         set:html={markdownify(config.params.copyright)}
       />
 
-      <Social className="social-icons lg:ml-auto" source={socialLinks} />
+
     </div>
   </div>
 

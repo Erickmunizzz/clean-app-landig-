@@ -137,3 +137,17 @@ h1, h2, h3, h4, h5, h6, strong { color: #0f172a; }
 .nexus-sections .cma-old-price { color: #64748b; font-size: .8rem; margin-bottom: 8px; }
 .nexus-sections .cma-annual-detail { color: #1d4ed8; font-size: .78rem; line-height: 1.6; margin-top: 12px; }
 .nexus-sections #pricing .pamt sup { margin-right: 5px; }
+
+.nexus-sections .cma-newsletter { margin-top: 24px; }
+.nexus-sections .cma-newsletter h5 { font-size: 1rem; line-height: 1.5; color: #0f172a; font-weight: 600; margin-bottom: 8px; }
+.nexus-sections .cma-newsletter > p { color: #475569; font-size: .8rem; line-height: 1.6; }
+.nexus-sections .cma-newsletter > label { display: block; font-size: .78rem; color: #475569; margin: 14px 0 8px; }
+.nexus-sections .cma-newsletter-fields { display: flex; gap: 8px; flex-wrap: wrap; }
+.nexus-sections .cma-newsletter-fields input { min-width: 0; flex: 1 1 160px; width: 100%; }
+.nexus-sections .cma-newsletter-fields .btn { padding: 10px 14px; font-size: .8rem; }
+.nexus-sections label.cma-newsletter-consent { display: flex; align-items: flex-start; gap: 8px; font-size: .7rem; line-height: 1.6; }
+.nexus-sections .cma-newsletter-consent input { flex: 0 0 16px; margin-top: 4px; accent-color: #2563eb; }
+.nexus-sections .cma-newsletter-trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.nexus-sections .cma-lead-status[data-state="success"] { color: #166534; padding: 12px; border: 1px solid #bbf7d0; background: #f0fdf4; border-radius: 10px; }
+.nexus-sections .cma-lead-status[data-state="error"] { color: #b91c1c; }
+.nexus-sections .cma-newsletter button:disabled { opacity: .65; cursor: wait; }

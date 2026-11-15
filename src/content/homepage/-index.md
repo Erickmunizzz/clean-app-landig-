@@ -1,14 +1,14 @@
 ---
 banner:
-  title: "O Sistema Definitivo para <strong>Gerenciar e Escalar sua Empresa de Limpeza</strong>"
-  content: "Automatize agendamentos, rastreie equipes em tempo real com GPS, gerencie pagamentos via Stripe e ofereça um portal exclusivo para seus clientes — tudo em uma única plataforma."
+  title: "The Complete Platform to <strong>Manage and Grow Your Cleaning Business</strong>"
+  content: "Automate scheduling, track teams in real time with GPS, manage payments through Stripe and give your clients a dedicated portal — all in one platform."
   button_primary:
     enable: true
-    label: "Começar Teste Gratuito de 14 Dias"
+    label: "Start Your 14-Day Free Trial"
     link: "https://cleanmaapp.com/admin/login"
   button_secondary:
     enable: true
-    label: "Ver Demonstração"
+    label: "View Demo"
     link: "#videoPlayer"
 
 main_features:

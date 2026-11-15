@@ -1,19 +1,19 @@
 {
   "main": [
     {
-      "name": "Recursos",
+      "name": "Features",
       "url": "/#features"
     },
     {
-      "name": "Planos",
+      "name": "Plans",
       "url": "/#pricing"
     },
     {
-      "name": "Perguntas frequentes",
+      "name": "Frequently asked questions",
       "url": "/#faq"
     },
     {
-      "name": "Ver Demonstração",
+      "name": "View Demo",
       "url": "/#videoPlayer"
     },
     {
@@ -21,61 +21,37 @@
       "url": "https://cleanmaapp.com/admin/login"
     }
   ],
-  "footer_col_1_title": "Primary",
-  "footer_col_2_title": "Resource",
-  "footer_col_3_title": "Legal",
+  "footer_col_1_title": "SUPPORT",
+  "footer_col_2_title": "THE COMPANY",
+  "footer_col_3_title": "CLEANMA CONTACT",
   "footer_primary": [
     {
-      "name": "Home",
-      "url": "/"
+      "name": "User Guides",
+      "url": "/#features"
     },
     {
-      "name": "About Us",
-      "url": "/about"
+      "name": "Contact Support",
+      "url": "mailto:support@cleanma.com,contact@cleanma.com"
     },
     {
-      "name": "Features",
-      "url": "/features"
-    },
-    {
-      "name": "Pricing",
-      "url": "/pricing"
-    },
-    {
-      "name": "Contact",
-      "url": "/contact"
+      "name": "Start Guide",
+      "url": "/#videoPlayer"
     }
   ],
   "footer_resource": [
     {
-      "name": "Case Studies",
-      "url": "/case-study"
-    },
-    {
-      "name": "Elements",
-      "url": "/elements"
-    },
-    {
-      "name": "Blog",
-      "url": "/blog"
-    },
-    {
-      "name": "Careers",
-      "url": "/careers"
-    },
-    {
-      "name": "Integrations",
-      "url": "/integrations"
+      "name": "The Story",
+      "url": "/#hero"
     }
   ],
   "footer_legal": [
     {
-      "name": "Privacy Policy",
-      "url": "/privacy-policy"
+      "name": "contact@cleanma.com",
+      "url": "mailto:contact@cleanma.com"
     },
     {
-      "name": "Terms and Conditions",
-      "url": "/term-and-condition"
+      "name": "support@cleanma.com",
+      "url": "mailto:support@cleanma.com"
     }
   ]
 }
