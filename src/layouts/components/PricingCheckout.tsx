@@ -10,8 +10,6 @@ interface PricingCheckoutProps {
 
 export default function PricingCheckout({
   planTitle,
-  monthlyPrice,
-  yearlyPrice,
   buttonLabel = "Get Access",
   isFeatured = false,
 }: PricingCheckoutProps) {
@@ -35,7 +33,6 @@ export default function PricingCheckout({
     const toggleEl = document.getElementById("pricing-toggle") as HTMLInputElement;
     const isYearly = toggleEl?.checked ?? false;
 
-    const priceToCharge = isYearly ? yearlyPrice : monthlyPrice;
     const intervalToCharge = isYearly ? "year" : "month";
 
     try {
@@ -45,8 +42,7 @@ export default function PricingCheckout({
         body: JSON.stringify({
           name,
           email,
-          planTitle,
-          price: priceToCharge,
+          plan: planTitle.toLowerCase(),
           interval: intervalToCharge,
         }),
       });

@@ -1,0 +1,9 @@
+# Integration corrections
+
+Public Supabase configuration is read by Astro from PUBLIC_SUPABASE_URL and PUBLIC_SUPABASE_ANON_KEY and passed as escaped form attributes to the static newsletter script. Both public variables are configured on the existing Vercel project. No service credential is embedded in the browser.
+
+Legacy GoHighLevel lead/contact endpoints and GHL checkout/webhook forwarding were removed. Stripe checkout accepts only starter/growth/scale and month/year; rejects monetary input; selects a server-configured Price ID; retrieves that Price and checks active status, GBP, recurring interval/count, fixed per-unit amount and the expected plan amount. Redirects are fixed to the official domain. No Stripe credentials or official Price IDs were supplied, so checkout remains unavailable until configured. The webhook returns 503 deliberately: no durable subscription fulfilment exists, and it must not acknowledge payments as processed. Do not enable live payments before authenticated account association, durable idempotent webhook fulfilment and payment testing are implemented.
+
+supabase/newsletter.sql documents the already-applied schema and server RPC, including UNIQUE email, RLS and denied direct anonymous writes/reads. It is a reference, not a migration to rerun. The deployed Edge Function owns consent, origin, email and rate-limit checks and uses server-managed Supabase credentials. The public key is application identification, not a secret authentication barrier.
+
+Legacy template forms outside the active homepage may still refer to removed /api/contact or /api/lead routes; these are not replacement support channels. The production homepage uses the newsletter Edge Function, mailto support and /migration. Stripe checkout on the separate landing deployment is not automatically proxied by the main application domain's existing /api routing.

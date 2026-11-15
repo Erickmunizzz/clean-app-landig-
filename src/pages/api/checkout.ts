@@ -1,132 +1,28 @@
 import type { APIRoute } from "astro";
 import Stripe from "stripe";
-
-// This route is server-rendered (Vercel Serverless Function)
 export const prerender = false;
-
-interface GHLContactPayload {
-  locationId: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-  tags: string[];
-}
-
-export const POST: APIRoute = async ({ request, url }) => {
-  const GHL_API_KEY = import.meta.env.GHL_API_KEY;
-  const GHL_LOCATION_ID = import.meta.env.GHL_LOCATION_ID;
-  const STRIPE_SECRET_KEY = import.meta.env.STRIPE_SECRET_KEY;
-
-  if (!STRIPE_SECRET_KEY) {
-    console.error("Missing STRIPE_SECRET_KEY env var");
-    return new Response(
-      JSON.stringify({ success: false, error: "Stripe configuration error" }),
-      { status: 500, headers: { "Content-Type": "application/json" } }
-    );
-  }
-
-  const stripe = new Stripe(STRIPE_SECRET_KEY, {
-    apiVersion: "2026-08-26.dahlia", // Matching latest SDK typings
-  });
-
-  // Parse incoming request
-  let name = "";
-  let email = "";
-  let planTitle = "Plan";
-  let price = "0";
-  let interval = "month";
-
+const expected = { starter: { month: 8999, year: 92870 }, growth: { month: 17999, year: 185750 }, scale: { month: 29999, year: 309590 } } as const;
+const reply = (status: number, error: string) => Response.json({success: false, error}, {status, headers: {'Cache-Control':'no-store'}});
+export const POST: APIRoute = async ({request}) => {
+  if (request.headers.get('origin') !== 'https://cleanmaapp.com' && request.headers.get('origin') !== 'https://cleanma-landing.vercel.app') return reply(403, 'Origin not allowed.');
+  let body: Record<string, unknown>;
+  try { const raw = await request.text(); if(raw.length > 4096) return reply(413, 'Request too large.'); body = JSON.parse(raw); } catch { return reply(400, 'Invalid request.'); }
+  if (!body || typeof body !== 'object' || 'price' in body || 'price_id' in body || 'amount' in body || 'currency' in body) return reply(400, 'Only a plan and billing interval may select a price.');
+  const {plan, interval, email} = body;
+  if ((plan !== 'starter' && plan !== 'growth' && plan !== 'scale') || (interval !== 'month' && interval !== 'year') || typeof email !== 'string' || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return reply(400, 'Invalid plan, billing interval or email.');
+  const ids = {
+    starter: {month: import.meta.env.STRIPE_PRICE_STARTER_MONTH, year: import.meta.env.STRIPE_PRICE_STARTER_YEAR},
+    growth: {month: import.meta.env.STRIPE_PRICE_GROWTH_MONTH, year: import.meta.env.STRIPE_PRICE_GROWTH_YEAR},
+    scale: {month: import.meta.env.STRIPE_PRICE_SCALE_MONTH, year: import.meta.env.STRIPE_PRICE_SCALE_YEAR},
+  };
+  const id = ids[plan][interval];
+  const secret = import.meta.env.STRIPE_SECRET_KEY;
+  if (!secret || !id || !/^price_[A-Za-z0-9]+$/.test(id)) return reply(503, 'Checkout is not configured yet. Please contact support.');
   try {
-    const body = await request.json();
-    name = body.name ?? "";
-    email = body.email ?? "";
-    planTitle = body.planTitle ?? "Plan";
-    price = body.price ?? "0";
-    interval = body.interval ?? "month"; // "month" or "year"
-  } catch (e) {
-    return new Response(
-      JSON.stringify({ success: false, error: "Invalid JSON body" }),
-      { status: 400, headers: { "Content-Type": "application/json" } }
-    );
-  }
-
-  if (!name || !email) {
-    return new Response(
-      JSON.stringify({ success: false, error: "Name and email are required" }),
-      { status: 400, headers: { "Content-Type": "application/json" } }
-    );
-  }
-
-  const nameParts = name.trim().split(/\s+/);
-  const firstName = nameParts[0] ?? "";
-  const lastName = nameParts.slice(1).join(" ");
-
-  // 1. Create/Upsert GoHighLevel Contact
-  if (GHL_API_KEY && GHL_LOCATION_ID) {
-    const payload: GHLContactPayload = {
-      locationId: GHL_LOCATION_ID,
-      firstName,
-      lastName,
-      email: email.trim(),
-      tags: ["checkout-initiated", planTitle],
-    };
-
-    try {
-      await fetch(
-        "https://services.leadconnectorhq.com/contacts/upsert",
-        {
-          method: "POST",
-          headers: {
-            Authorization: `Bearer ${GHL_API_KEY}`,
-            "Content-Type": "application/json",
-            Version: "2021-07-28",
-          },
-          body: JSON.stringify(payload),
-        }
-      );
-      console.log("GHL contact initiated for checkout");
-    } catch (err) {
-      console.error("GHL integration error during checkout:", err);
-      // We don't fail the checkout if GHL fails, just log it.
-    }
-  }
-
-  // 2. Create Stripe Checkout Session
-  try {
-    const unitAmount = Math.round(parseFloat(price) * 100);
-
-    const session = await stripe.checkout.sessions.create({
-      payment_method_types: ["card"],
-      customer_email: email.trim(),
-      line_items: [
-        {
-          price_data: {
-            currency: "usd",
-            product_data: {
-              name: planTitle,
-            },
-            unit_amount: unitAmount,
-            recurring: {
-              interval: interval === "year" ? "year" : "month",
-            },
-          },
-          quantity: 1,
-        },
-      ],
-      mode: "subscription",
-      success_url: `${url.origin}?session_id={CHECKOUT_SESSION_ID}&success=true`,
-      cancel_url: `${url.origin}/pricing?canceled=true`,
-    });
-
-    return new Response(
-      JSON.stringify({ success: true, url: session.url }),
-      { status: 200, headers: { "Content-Type": "application/json" } }
-    );
-  } catch (err: any) {
-    console.error("Stripe Checkout error:", err);
-    return new Response(
-      JSON.stringify({ success: false, error: err.message }),
-      { status: 500, headers: { "Content-Type": "application/json" } }
-    );
-  }
+    const stripe = new Stripe(secret);
+    const price = await stripe.prices.retrieve(id);
+    if (!price.active || price.currency !== 'gbp' || price.type !== 'recurring' || price.recurring?.interval !== interval || price.recurring.interval_count !== 1 || price.billing_scheme !== 'per_unit' || price.unit_amount !== expected[plan][interval] || price.custom_unit_amount || price.currency_options) return reply(503, 'The selected plan is unavailable. Please contact support.');
+    const session = await stripe.checkout.sessions.create({mode:'subscription', currency:'gbp', customer_email:email.trim().toLowerCase(), line_items:[{price:id, quantity:1}], metadata:{plan,interval}, success_url:'https://cleanmaapp.com/admin/login?checkout=returned', cancel_url:'https://cleanmaapp.com/#pricing'});
+    return Response.json({success:true,url:session.url},{headers:{'Cache-Control':'no-store'}});
+  } catch { return reply(502, 'Checkout could not be started. Please try again later.'); }
 };

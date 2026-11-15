@@ -5,8 +5,9 @@
   event.preventDefault();if(button.disabled||!form.reportValidity())return;
   button.disabled=true;button.textContent='Sending…';status.textContent='';delete status.dataset.state;
   try{
+   if(!form.getAttribute('action')||!form.dataset.publicKey)throw new Error('Sign-up is temporarily unavailable. Please try again later.');
    const data=new FormData(form);
-   const response=await fetch(form.action,{method:'POST',headers:{'Content-Type':'application/json',apikey:'sb_publishable_MQz1s2hIcpM-w83-akFCPA_TJDDgYjG'},body:JSON.stringify({email:data.get('email'),consent:data.get('consent')==='on',website:data.get('website')||''}),signal:AbortSignal.timeout(15000)});
+   const response=await fetch(form.action,{method:'POST',headers:{'Content-Type':'application/json',apikey:form.dataset.publicKey},body:JSON.stringify({email:data.get('email'),consent:data.get('consent')==='on',website:data.get('website')||''}),signal:AbortSignal.timeout(15000)});
    const result=await response.json().catch(()=>null);
    if(!response.ok||result?.success!==true)throw new Error(result?.error||'Sign-up is temporarily unavailable. Please try again later.');
    form.reset();status.dataset.state='success';status.textContent='Your email has been registered successfully! We will be in touch soon.';
