@@ -15,9 +15,9 @@ toggler:
   yearly_label: "Yearly"
 
 plans:
-  - title: "Essentials"
-    price: "97"
-    yearly_price: "970"
+  - title: "Starter"
+    price: "89.99"
+    yearly_price: "928.70"
     is_featured: false
     button:
       enable: true
@@ -38,8 +38,8 @@ plans:
         included: false
 
   - title: "Growth"
-    price: "297"
-    yearly_price: "2970"
+    price: "179.99"
+    yearly_price: "1857.50"
     is_featured: true
     offer_text: Most Popular
     button:
@@ -61,8 +61,8 @@ plans:
         included: false
 
   - title: "Scale"
-    price: "497"
-    yearly_price: "4970"
+    price: "299.99"
+    yearly_price: "3095.90"
     is_featured: false
     button:
       enable: true
@@ -88,12 +88,12 @@ comparison:
   title: "Pricing Plans <strong>Comparison</strong>"
   headers:
     - label: "Features"
-    - label: "Essentials"
+    - label: "Starter"
     - label: "Growth"
     - label: "Scale"
   rows:
     - feature: "Monthly Price"
-      values: ["$97", "$297", "$497"]
+      values: ["£89.99", "£179.99", "£299.99"]
     - feature: "User Accounts"
       values: ["3", "10", "Unlimited"]
     - feature: "Unified Lead Inbox"
