@@ -1,0 +1,23 @@
+---
+import Base from "./Base.astro";
+import Footer from "./nexus/Footer.astro";
+interface Props { title: string; description: string; path: string; }
+const {title, description, path} = Astro.props;
+---
+<Base title={`${title} — CleanMa`} description={description} canonical={`https://cleanmaapp.com${path}`} hideFooter={true}>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="/nexus/css/scoped.css" />
+  <div class="nexus-sections">
+    <section class="cma-document-section">
+      <div class="container">
+        <article class="gc cma-document rv">
+          <a class="cma-back-link" href="/">← Back to CleanMa</a>
+          <slot />
+        </article>
+      </div>
+    </section>
+    <Footer />
+  </div>
+  <script is:inline defer src="/nexus/js/landing.js"></script>
+  <script is:inline defer src="/nexus/js/newsletter.js"></script>
+</Base>

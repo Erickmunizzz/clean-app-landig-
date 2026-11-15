@@ -1,0 +1,18 @@
+---
+import Institutional from "@/layouts/Institutional.astro";
+---
+<Institutional title="Data Migration" description="Request help importing your Excel or CSV client spreadsheets into CleanMa." path="/migration">
+  <span class="slbl">Data migration</span>
+  <h1>Move your spreadsheets <span>into CleanMa</span></h1>
+  <p class="cma-document-lead">Tell our support team about your Excel or CSV files. We will help you plan the next steps for importing your client data.</p>
+  <ol><li>Describe your current spreadsheet and the information you want to move.</li><li>Our team will discuss the file format and the appropriate way to share your data.</li><li>Review the import details with support before migration.</li></ol>
+  <form id="cma-migration-request" class="cma-migration-form">
+    <label for="migration-business">Business name<input id="migration-business" name="business" autocomplete="organization" maxlength="120" required></label>
+    <label for="migration-format">Spreadsheet format<select id="migration-format" name="format"><option>Excel (.xlsx / .xls)</option><option>CSV (.csv)</option><option>Excel and CSV</option></select></label>
+    <label for="migration-notes">What would you like to import?<textarea id="migration-notes" name="notes" rows="4" maxlength="1500" placeholder="For example: client names, addresses and service schedules."></textarea></label>
+    <p class="cma-form-note">This opens your email app with a draft addressed to support@cleanmaapp.com. Please do not include passwords or sensitive client records in your initial message.</p>
+    <button class="bgrd btn" type="submit">Request Migration Help</button>
+    <a href="mailto:support@cleanmaapp.com?subject=CleanMa%20data%20migration%20request">Or email support directly</a>
+  </form>
+  <script is:inline defer src="/nexus/js/migration.js"></script>
+</Institutional>

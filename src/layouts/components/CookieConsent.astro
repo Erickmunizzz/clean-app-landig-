@@ -1,0 +1,41 @@
+<div id="cma-cookie-banner" class="cma-cookie-banner" role="region" aria-label="Cookie preferences" hidden>
+  <div><p>We use cookies to ensure you get the best experience on our website.</p><a href="/privacy">Privacy Policy</a></div>
+  <div class="cma-cookie-actions"><button type="button" class="cma-cookie-primary" data-cookie-accept>Accept All</button><button type="button" data-cookie-settings>Manage Settings</button></div>
+</div>
+<dialog id="cma-cookie-dialog" class="cma-cookie-dialog" aria-labelledby="cma-cookie-title" aria-describedby="cma-cookie-description" data-lenis-prevent>
+  <form id="cma-cookie-form">
+    <div class="cma-cookie-heading"><h2 id="cma-cookie-title">Cookie settings</h2><button type="button" aria-label="Close cookie settings" data-cookie-close>×</button></div>
+    <p id="cma-cookie-description">Choose which optional cookies you allow. You can change your preferences using Cookie settings in the footer.</p>
+    <label class="cma-cookie-option"><span><strong>Essential</strong><small>Required for core functionality and to remember your preferences.</small></span><input type="checkbox" checked disabled aria-label="Essential cookies always enabled"></label>
+    <label class="cma-cookie-option"><span><strong>Analytics</strong><small>Allow optional measurement of how the website is used.</small></span><input id="cma-cookie-analytics" type="checkbox" name="analytics"></label>
+    <label class="cma-cookie-option"><span><strong>Marketing</strong><small>Allow optional marketing cookies and campaign measurement.</small></span><input id="cma-cookie-marketing" type="checkbox" name="marketing"></label>
+    <p class="cma-cookie-note">Optional analytics and marketing tracking are not currently enabled on this landing page.</p>
+    <div class="cma-cookie-actions"><button type="submit" class="cma-cookie-primary">Save Preferences</button><button type="button" data-cookie-reject>Reject Optional</button><button type="button" data-cookie-accept>Accept All</button></div>
+    <p id="cma-cookie-storage-status" role="status" aria-live="polite"></p>
+  </form>
+</dialog>
+<script is:inline defer src="/scripts/cookie-consent.js"></script>
+<style>
+  .cma-cookie-banner[hidden] { display: none !important; }
+  .cma-cookie-banner { position: fixed; z-index: 10000; bottom: 20px; left: 20px; right: 20px; max-width: 1040px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 24px; border: 1px solid #e2e8f0; border-radius: 16px; background: #fff; color: #0f172a; box-shadow: 0 12px 50px rgb(15 23 42 / 14%); font-family: inherit; }
+  .cma-cookie-banner p { font-size: .875rem; line-height: 1.6; margin: 0 0 4px; }
+  .cma-cookie-banner a { color: #2563eb; font-size: .8rem; text-decoration: underline; }
+  .cma-cookie-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .cma-cookie-actions button { cursor: pointer; border: 1px solid #cbd5e1; border-radius: 9px; background: #fff; color: #0f172a; padding: 10px 16px; font: inherit; font-size: .85rem; font-weight: 600; white-space: nowrap; }
+  .cma-cookie-actions .cma-cookie-primary { background: #2563eb; border-color: #2563eb; color: #fff; }
+  .cma-cookie-banner button:focus-visible, .cma-cookie-dialog :is(button,input):focus-visible { outline: 2px solid #2563eb; outline-offset: 3px; }
+  .cma-cookie-dialog:not([open]) { display: none; }
+  .cma-cookie-dialog { position: fixed; inset: 0; z-index: 10001; margin: auto; width: min(600px, calc(100% - 32px)); max-height: calc(100dvh - 40px); overflow: auto; border: 1px solid #e2e8f0; border-radius: 18px; padding: 28px; background: #fff; color: #0f172a; box-shadow: 0 20px 80px rgb(15 23 42 / 20%); }
+  .cma-cookie-dialog::backdrop { background: rgb(15 23 42 / 40%); }
+  .cma-cookie-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+  .cma-cookie-heading h2 { font-size: 1.4rem; font-weight: 700; margin: 0; }
+  .cma-cookie-heading button { background: #f8fafc; color: #475569; border: 1px solid #e2e8f0; border-radius: 8px; padding: 0 10px; font-size: 1.5rem; cursor: pointer; }
+  .cma-cookie-dialog p { font-size: .875rem; line-height: 1.65; color: #475569; }
+  .cma-cookie-option { display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid #e2e8f0; padding: 18px 0; }
+  .cma-cookie-option strong, .cma-cookie-option small { display: block; }
+  .cma-cookie-option strong { font-size: .9rem; margin-bottom: 5px; }
+  .cma-cookie-option small { font-size: .8rem; line-height: 1.5; color: #475569; }
+  .cma-cookie-option input { width: 18px; height: 18px; flex-shrink: 0; accent-color: #2563eb; }
+  .cma-cookie-dialog .cma-cookie-note { font-size: .75rem; margin-bottom: 18px; }
+  @media (max-width: 640px) { .cma-cookie-banner { bottom: 12px; left: 12px; right: 12px; padding: 18px; flex-direction: column; align-items: flex-start; gap: 14px; } .cma-cookie-dialog { padding: 22px; } }
+</style>

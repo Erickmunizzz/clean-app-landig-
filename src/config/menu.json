@@ -21,37 +21,61 @@
       "url": "https://cleanmaapp.com/admin/login"
     }
   ],
-  "footer_col_1_title": "SUPPORT",
-  "footer_col_2_title": "THE COMPANY",
-  "footer_col_3_title": "CLEANMA CONTACT",
+  "footer_col_1_title": "Support",
+  "footer_col_2_title": "Company",
+  "footer_col_3_title": "CleanMa",
   "footer_primary": [
     {
       "name": "User Guides",
       "url": "/#features"
     },
     {
-      "name": "Contact Support",
-      "url": "mailto:support@cleanma.com,contact@cleanma.com"
+      "name": "Support Center",
+      "url": "mailto:support@cleanmaapp.com"
     },
     {
-      "name": "Start Guide",
+      "name": "Getting Started",
       "url": "/#videoPlayer"
+    },
+    {
+      "name": "Data Migration",
+      "url": "/migration"
     }
   ],
   "footer_resource": [
     {
-      "name": "The Story",
-      "url": "/#hero"
+      "name": "About Us",
+      "url": "/about"
+    },
+    {
+      "name": "Contact",
+      "url": "mailto:support@cleanmaapp.com"
+    },
+    {
+      "name": "Terms of Service",
+      "url": "/terms"
+    },
+    {
+      "name": "Privacy Policy",
+      "url": "/privacy"
     }
   ],
   "footer_legal": [
     {
-      "name": "contact@cleanma.com",
-      "url": "mailto:contact@cleanma.com"
+      "name": "Start Free Trial",
+      "url": "/admin/login"
     },
     {
-      "name": "support@cleanma.com",
-      "url": "mailto:support@cleanma.com"
+      "name": "Pricing",
+      "url": "/#pricing"
+    },
+    {
+      "name": "Features",
+      "url": "/#features"
+    },
+    {
+      "name": "FAQ",
+      "url": "/#faq"
     }
   ]
 }
