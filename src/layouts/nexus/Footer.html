@@ -6,7 +6,15 @@
                         <img src="/images/cleanma-official.png" width="83" height="45" alt="CleanMa"><span>CleanMa</span>
                      </a>
                      <p style="font-size:.875rem;color:var(--tx3);line-height:1.65;max-width:280px">O sistema para gerenciar e escalar sua empresa de limpeza.</p>
-                     <div class="d-flex gap-2 mt-3"><input class="nli" type="email" placeholder="Seu e-mail" style="max-width:200px"><button class="bgrd btn px-3 py-2" style="font-size:.85rem;white-space:nowrap" onclick="window.location.href='https://cleanmaapp.com/admin/login'">Começar</button></div>
+                     <form id="cma-newsletter" class="cma-newsletter" action="https://eymkowczlmbrfxlxcwdm.supabase.co/functions/v1/newsletter-subscribe" method="post">
+                        <h5>Receba dicas para escalar sua empresa de limpeza</h5>
+                        <p>Dicas exclusivas e ofertas especiais do CleanMa direto no seu e-mail.</p>
+                        <label for="cma-lead-email">Seu e-mail profissional</label>
+                        <div class="cma-newsletter-fields"><input class="nli" id="cma-lead-email" name="email" type="email" autocomplete="email" maxlength="254" required placeholder="voce@empresa.com"><button class="bgrd btn" type="submit">Quero receber</button></div>
+                        <div class="cma-newsletter-trap" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+                        <label class="cma-newsletter-consent"><input name="consent" type="checkbox" required> <span>Concordo em receber dicas e ofertas comerciais do CleanMa por e-mail. Poderei cancelar o recebimento.</span></label>
+                        <p id="cma-lead-status" class="cma-lead-status" role="status" aria-live="polite"></p>
+                     </form>
                   </div>
                   <div class="col-6 col-md-2 fcol">
                      <h5>Produto</h5>
