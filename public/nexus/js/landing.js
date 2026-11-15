@@ -10,15 +10,34 @@ const rvObs = new IntersectionObserver(
 );
 document.querySelectorAll('.rv').forEach(el => rvObs.observe(el));
 
-/*  PRICING TOGGLE  */
-document.getElementById('ptog').addEventListener('change', function() {
-    const y = this.checked;
-    document.getElementById('ptogThumb').style.transform = y ? 'translateX(24px)' : 'translateX(0)';
-    document.querySelectorAll('.pv').forEach(el => el.textContent = y ? el.dataset.y : el.dataset.m);
-    document.querySelectorAll('.pper').forEach(el => {
-        el.textContent = y ? 'por ano, cobrança anual (12 meses)' : 'por mês, cobrança mensal';
+/* PRICING PERIOD: display and navigation use the same selected interval. */
+let billingInterval = 'month';
+const priceFormat = new Intl.NumberFormat('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+function selectBilling(interval) {
+    billingInterval = interval;
+    const yearly = interval === 'year';
+    document.querySelectorAll('[data-billing]').forEach(button => {
+        const active = button.dataset.billing === interval;
+        button.classList.toggle('is-active', active);
+        button.setAttribute('aria-pressed', String(active));
     });
-});
-
-
+    document.querySelectorAll('#pricing .pcard').forEach(card => {
+        const price = card.querySelector('.pv');
+        price.textContent = priceFormat.format(Number(yearly ? price.dataset.yCents : price.dataset.mCents) / 100);
+        card.querySelector('.pper').textContent = yearly ? '/ ano' : '/ mês';
+        card.querySelector('.cma-old-price').hidden = !yearly;
+        card.querySelector('.cma-annual-detail').hidden = !yearly;
+    });
+}
+document.querySelectorAll('[data-billing]').forEach(button => button.addEventListener('click', () => selectBilling(button.dataset.billing)));
+document.querySelectorAll('[data-subscribe-plan]').forEach(button => button.addEventListener('click', event => {
+    event.preventDefault();
+    const url = new URL('https://cleanmaapp.com/admin/login');
+    url.searchParams.set('plan', button.dataset.subscribePlan);
+    url.searchParams.set('interval', billingInterval);
+    window.location.assign(url.href);
+}));
+// Inline fallback handlers are removed only after the working listeners are installed.
+document.querySelectorAll('[data-subscribe-plan]').forEach(button => button.removeAttribute('onclick'));
+selectBilling('month');
 })();

@@ -6,7 +6,7 @@
   const monthly = document.getElementById('cma-monthly');
   const net = document.getElementById('cma-net');
   const error = document.getElementById('cma-roi-error');
-  const money = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' });
+  const money = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
   const number = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 1 });
   function update() {
     const valid = fields.every(field => field.value.trim() !== '' && Number.isFinite(Number(field.value)) && field.checkValidity());

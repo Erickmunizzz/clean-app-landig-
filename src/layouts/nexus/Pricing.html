@@ -6,54 +6,60 @@
                   <h2 class="stitle">Planos para <span class="gt">cada etapa da sua empresa</span></h2>
                   <p class="ssub mx-auto">Experimente gratuitamente por 14 dias, sem cartão e sem compromisso.</p>
                </div>
-               <div class="d-flex align-items-center justify-content-center gap-3 mb-5 rv">
-                  <span style="font-size:.9rem;color:var(--tx2);font-weight:500">Mensal</span>
-                  <div style="position:relative;width:52px;height:28px"><input type="checkbox" id="ptog" aria-label="Mostrar preços anuais" style="position:absolute;opacity:0;width:0;height:0"><label for="ptog" id="ptogLabel" style="position:absolute;inset:0;background:var(--sf);border:1px solid var(--bd2);border-radius:100px;cursor:pointer;transition:.3s"><span id="ptogThumb" style="position:absolute;width:20px;height:20px;left:3px;top:3px;background:var(--grad);border-radius:50%;transition:.3s;display:block"></span></label></div>
-                  <span style="font-size:.9rem;color:var(--tx2);font-weight:500">Anual</span>
-                  <span style="background:rgba(37,99,235,.12);border:1px solid rgba(37,99,235,.25);color:#1D4ED8;font-size:.72rem;font-weight:600;padding:3px 10px;border-radius:100px"><i class="fa-solid fa-tag me-1"></i>Valor total de 12 meses</span>
+               <div class="d-flex justify-content-center mb-5 rv">
+                  <div class="cma-billing-switch" role="group" aria-label="Período de cobrança">
+                     <button type="button" data-billing="month" aria-pressed="true" class="is-active">Mensal</button>
+                     <button type="button" data-billing="year" aria-pressed="false">Anual <span>-14%</span></button>
+                  </div>
                </div>
                <div class="row g-4 align-items-start rv">
                   <div class="col-md-4">
-                     <div class="pcard h-100">
+                     <div class="pcard h-100" data-plan="starter">
                         <div style="font-size:.82rem;font-weight:600;color:var(--tx3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">Starter</div>
-                        <div class="pamt mb-1"><sup>£</sup><span class="pv" aria-live="polite" data-m="89.99" data-y="1,079.88">89.99</span></div>
-                        <div style="font-size:.82rem;color:var(--tx3)" class="pper">por mês, cobrança mensal</div>
+                        <div class="cma-old-price" hidden><s>De R$ 1.079,88</s> por</div>
+                        <div class="pamt mb-1"><sup>R$</sup><span class="pv" aria-live="polite" data-m-cents="8999" data-y-cents="92870">89,99</span></div>
+                        <div style="font-size:.82rem;color:var(--tx3)" class="pper">/ mês</div>
+                        <p class="cma-annual-detail" hidden>R$ 77,39 / mês — Você economiza R$ 151,18</p>
                         <p style="font-size:.875rem;color:var(--tx2);margin:14px 0 20px;padding-bottom:20px;border-bottom:1px solid var(--bd)">Para pequenas empresas de limpeza começando.</p>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Clientes e endereços centralizados</div>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Gestão de escalas</div>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Status de jobs</div>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Alocação de equipes</div>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Painel de operações</div>
-                        <button class="boc btn w-100 py-2 mt-4" onclick="window.location.href='https://cleanmaapp.com/admin/login'">Começar Teste Gratuito de 14 Dias</button>
+                        <button class="boc btn w-100 py-2 mt-4" data-subscribe-plan="starter" onclick="window.location.href='https://cleanmaapp.com/admin/login?plan=starter&amp;interval=month'">Começar Teste Gratuito de 14 Dias</button>
                      </div>
                   </div>
                   <div class="col-md-4">
-                     <div class="pcard pop h-100">
+                     <div class="pcard pop h-100" data-plan="growth">
                         <span class="pbadge"><i class="fa-solid fa-star me-1"></i>Mais popular</span>
                         <div style="font-size:.82rem;font-weight:600;color:var(--tx3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">Growth</div>
-                        <div class="pamt mb-1"><sup>£</sup><span class="pv" aria-live="polite" data-m="179.99" data-y="2,159.88">179.99</span></div>
-                        <div style="font-size:.82rem;color:var(--tx3)" class="pper">por mês, cobrança mensal</div>
+                        <div class="cma-old-price" hidden><s>De R$ 2.159,88</s> por</div>
+                        <div class="pamt mb-1"><sup>R$</sup><span class="pv" aria-live="polite" data-m-cents="17999" data-y-cents="185750">179,99</span></div>
+                        <div style="font-size:.82rem;color:var(--tx3)" class="pper">/ mês</div>
+                        <p class="cma-annual-detail" hidden>R$ 154,79 / mês — Você economiza R$ 302,38</p>
                         <p style="font-size:.875rem;color:var(--tx2);margin:14px 0 20px;padding-bottom:20px;border-bottom:1px solid var(--bd)">Para equipes em crescimento com automação avançada.</p>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Automação avançada</div>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Equipes em crescimento</div>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Gestão de operações</div>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Pagamentos e cobranças</div>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Relatórios da operação</div>
-                        <button class="bgrd btn w-100 py-2 mt-4" onclick="window.location.href='https://cleanmaapp.com/admin/login'">Começar Teste Gratuito de 14 Dias <i class="fa-solid fa-arrow-right ms-1 fa-sm"></i></button>
+                        <button class="bgrd btn w-100 py-2 mt-4" data-subscribe-plan="growth" onclick="window.location.href='https://cleanmaapp.com/admin/login?plan=growth&amp;interval=month'">Começar Teste Gratuito de 14 Dias <i class="fa-solid fa-arrow-right ms-1 fa-sm"></i></button>
                      </div>
                   </div>
                   <div class="col-md-4">
-                     <div class="pcard h-100">
+                     <div class="pcard h-100" data-plan="scale">
                         <div style="font-size:.82rem;font-weight:600;color:var(--tx3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">Scale</div>
-                        <div class="pamt mb-1"><sup>£</sup><span class="pv" aria-live="polite" data-m="299.99" data-y="3,599.88">299.99</span></div>
-                        <div style="font-size:.82rem;color:var(--tx3)" class="pper">por mês, cobrança mensal</div>
+                        <div class="cma-old-price" hidden><s>De R$ 3.599,88</s> por</div>
+                        <div class="pamt mb-1"><sup>R$</sup><span class="pv" aria-live="polite" data-m-cents="29999" data-y-cents="309590">299,99</span></div>
+                        <div style="font-size:.82rem;color:var(--tx3)" class="pper">/ mês</div>
+                        <p class="cma-annual-detail" hidden>R$ 257,99 / mês — Você economiza R$ 503,98</p>
                         <p style="font-size:.875rem;color:var(--tx2);margin:14px 0 20px;padding-bottom:20px;border-bottom:1px solid var(--bd)">Para grandes operações, ilimitado com suporte prioritário.</p>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Operação ilimitada</div>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Gestão de grandes equipes</div>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Portal do cliente</div>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Compliance e inventário</div>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Suporte prioritário</div>
-                        <button class="boc btn w-100 py-2 mt-4" onclick="window.location.href='https://cleanmaapp.com/admin/login'">Começar Teste Gratuito de 14 Dias</button>
+                        <button class="boc btn w-100 py-2 mt-4" data-subscribe-plan="scale" onclick="window.location.href='https://cleanmaapp.com/admin/login?plan=scale&amp;interval=month'">Começar Teste Gratuito de 14 Dias</button>
                      </div>
                   </div>
                </div>
