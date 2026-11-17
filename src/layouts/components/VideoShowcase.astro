@@ -6,6 +6,9 @@
 // - Click again → mute, show overlay
 ---
 
+const VIDEO_URL = "https://seu-projeto.supabase.co/storage/v1/object/public/videos/cleanma-institutional.mp4";
+---
+
 <div
   class="relative w-full max-w-280 mx-auto rounded-4xl overflow-hidden"
   data-gsap-video-showcase
@@ -13,14 +16,14 @@
   <video
     id="videoPlayer"
     class="w-full h-auto aspect-video object-cover"
-    src="/images/cleanmaapp.com.mp4"
+    src={VIDEO_URL}
     autoplay
     muted
     loop
     playsinline
     preload="auto"
   >
-    <source src="/images/cleanmaapp.com.mp4" type="video/mp4" />
+    <source src={VIDEO_URL} type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
