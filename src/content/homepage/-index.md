@@ -5,7 +5,7 @@ banner:
   button_primary:
     enable: true
     label: "Start Your 14-Day Free Trial"
-    link: "https://cleanmaapp.com/admin/login"
+    link: "https://cleanmaapp.online/signup"
   button_secondary:
     enable: true
     label: "View Demo"
@@ -122,7 +122,7 @@ growth_process:
   button:
     enable: true
     label: "Start Your 14-Day Free Trial"
-    link: "/pricing"
+    link: "https://cleanmaapp.online/signup"
 
 integrations:
   enable: true
