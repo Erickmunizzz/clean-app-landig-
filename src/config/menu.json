@@ -63,7 +63,7 @@
   "footer_legal": [
     {
       "name": "Start Free Trial",
-      "url": "/admin/login"
+      "url": "https://cleanmaapp.com/admin/login"
     },
     {
       "name": "Pricing",
