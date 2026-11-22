@@ -32,7 +32,7 @@ function selectBilling(interval) {
 document.querySelectorAll('[data-billing]').forEach(button => button.addEventListener('click', () => selectBilling(button.dataset.billing)));
 document.querySelectorAll('[data-subscribe-plan]').forEach(button => button.addEventListener('click', event => {
     event.preventDefault();
-    const url = new URL('https://cleanmaapp.com/admin/login');
+    const url = new URL('https://cleanmaapp.online/signup');
     url.searchParams.set('plan', button.dataset.subscribePlan);
     url.searchParams.set('interval', billingInterval);
     window.location.assign(url.href);
