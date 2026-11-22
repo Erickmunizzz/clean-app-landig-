@@ -5,5 +5,5 @@ description: "Stop wasting thousands on scattered tools that don't convert and s
 button:
   enable: true
   label: "Start Your 14-Days Free Trial"
-  link: "#!"
+  link: "https://cleanmaapp.online/signup"
 ---
