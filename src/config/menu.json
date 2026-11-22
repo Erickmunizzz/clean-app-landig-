@@ -18,7 +18,7 @@
     },
     {
       "name": "Login",
-      "url": "https://cleanmaapp.com/admin/login"
+      "url": "https://cleanmaapp.online/login/admin"
     }
   ],
   "footer_col_1_title": "Support",
@@ -63,7 +63,7 @@
   "footer_legal": [
     {
       "name": "Start Free Trial",
-      "url": "https://cleanmaapp.com/admin/login"
+      "url": "https://cleanmaapp.online/signup"
     },
     {
       "name": "Pricing",
@@ -76,6 +76,10 @@
     {
       "name": "FAQ",
       "url": "/#faq"
+    },
+    {
+      "name": "Cleaner Login",
+      "url": "https://cleanmaapp.online/login/cleaner"
     }
   ]
 }
