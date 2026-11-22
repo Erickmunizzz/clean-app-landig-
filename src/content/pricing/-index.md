@@ -22,7 +22,7 @@ plans:
     button:
       enable: true
       label: "Start Free Trial"
-      link: "/contact"
+      link: "https://cleanmaapp.online/signup?plan=starter"
     description: "The core necessities for organizing your leads and capturing more business."
     features:
       - label: "Unified Lead Inbox"
@@ -45,7 +45,7 @@ plans:
     button:
       enable: true
       label: "Start Free Trial"
-      link: "/contact"
+      link: "https://cleanmaapp.online/signup?plan=growth"
     description: "Everything you need to put your business growth on complete autopilot."
     features:
       - label: "Unified Lead Inbox & Reviews"
@@ -67,7 +67,7 @@ plans:
     button:
       enable: true
       label: "Start Free Trial"
-      link: "/contact"
+      link: "https://cleanmaapp.online/signup?plan=scale"
     description: "Total control and advanced tools to scale multiple locations seamlessly."
     features:
       - label: "Everything in Growth"
