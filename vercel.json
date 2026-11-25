@@ -4,14 +4,18 @@
   "installCommand": "npm ci",
   "buildCommand": "npm run build",
   "rewrites": [
-    { "source": "/admin", "destination": "https://cleanmaapp-f2qq.vercel.app/admin" },
-    { "source": "/admin/:path*", "destination": "https://cleanmaapp-f2qq.vercel.app/admin/:path*" },
-    { "source": "/cleaner", "destination": "https://cleanmaapp-f2qq.vercel.app/cleaner" },
-    { "source": "/cleaner/:path*", "destination": "https://cleanmaapp-f2qq.vercel.app/cleaner/:path*" },
-    { "source": "/planos", "destination": "https://cleanmaapp-f2qq.vercel.app/planos" },
-    { "source": "/suspended", "destination": "https://cleanmaapp-f2qq.vercel.app/suspended" },
-    { "source": "/auth", "destination": "https://cleanmaapp-f2qq.vercel.app/auth" },
-    { "source": "/assets/:path*", "destination": "https://cleanmaapp-f2qq.vercel.app/assets/:path*" },
-    { "source": "/api/:path*", "destination": "https://cleanmaapp-f2qq.vercel.app/api/:path*" }
+    { "source": "/admin", "destination": "https://cleanmaapp-erick-bae5.vercel.app/admin" },
+    { "source": "/admin/:path*", "destination": "https://cleanmaapp-erick-bae5.vercel.app/admin/:path*" },
+    { "source": "/cleaner", "destination": "https://cleanmaapp-erick-bae5.vercel.app/cleaner" },
+    { "source": "/cleaner/:path*", "destination": "https://cleanmaapp-erick-bae5.vercel.app/cleaner/:path*" },
+    { "source": "/planos", "destination": "https://cleanmaapp-erick-bae5.vercel.app/planos" },
+    { "source": "/suspended", "destination": "https://cleanmaapp-erick-bae5.vercel.app/suspended" },
+    { "source": "/auth", "destination": "https://cleanmaapp-erick-bae5.vercel.app/auth" },
+    { "source": "/subscribe/:path*", "destination": "https://cleanmaapp-erick-bae5.vercel.app/subscribe/:path*" },
+    { "source": "/client-payment-result", "destination": "https://cleanmaapp-erick-bae5.vercel.app/client-payment-result" },
+    { "source": "/cleanma-logo.jpg", "destination": "https://cleanmaapp-erick-bae5.vercel.app/cleanma-logo.jpg" },
+    { "source": "/cleanma-favicon.png", "destination": "https://cleanmaapp-erick-bae5.vercel.app/cleanma-favicon.png" },
+    { "source": "/assets/:path*", "destination": "https://cleanmaapp-erick-bae5.vercel.app/assets/:path*" },
+    { "source": "/api/:path*", "destination": "https://cleanmaapp-erick-bae5.vercel.app/api/:path*" }
   ]
 }
