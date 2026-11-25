@@ -25,7 +25,7 @@
   "navigation_button": {
     "enable": true,
     "label": "Start Your 14-Day Free Trial",
-    "link": "https://cleanmaapp.online/signup"
+    "link": "/admin/login?mode=signup"
   },
   "google_tag_manager": {
     "enable": false,
