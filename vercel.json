@@ -4,14 +4,14 @@
   "installCommand": "npm ci",
   "buildCommand": "npm run build",
   "rewrites": [
-    { "source": "/admin", "destination": "https://cleanmaapp.online/admin" },
-    { "source": "/admin/:path*", "destination": "https://cleanmaapp.online/admin/:path*" },
-    { "source": "/cleaner", "destination": "https://cleanmaapp.online/cleaner" },
-    { "source": "/cleaner/:path*", "destination": "https://cleanmaapp.online/cleaner/:path*" },
-    { "source": "/planos", "destination": "https://cleanmaapp.online/planos" },
-    { "source": "/suspended", "destination": "https://cleanmaapp.online/suspended" },
-    { "source": "/auth", "destination": "https://cleanmaapp.online/auth" },
-    { "source": "/assets/:path*", "destination": "https://cleanmaapp.online/assets/:path*" },
-    { "source": "/api/:path*", "destination": "https://cleanmaapp.online/api/:path*" }
+    { "source": "/admin", "destination": "https://cleanmaapp-f2qq.vercel.app/admin" },
+    { "source": "/admin/:path*", "destination": "https://cleanmaapp-f2qq.vercel.app/admin/:path*" },
+    { "source": "/cleaner", "destination": "https://cleanmaapp-f2qq.vercel.app/cleaner" },
+    { "source": "/cleaner/:path*", "destination": "https://cleanmaapp-f2qq.vercel.app/cleaner/:path*" },
+    { "source": "/planos", "destination": "https://cleanmaapp-f2qq.vercel.app/planos" },
+    { "source": "/suspended", "destination": "https://cleanmaapp-f2qq.vercel.app/suspended" },
+    { "source": "/auth", "destination": "https://cleanmaapp-f2qq.vercel.app/auth" },
+    { "source": "/assets/:path*", "destination": "https://cleanmaapp-f2qq.vercel.app/assets/:path*" },
+    { "source": "/api/:path*", "destination": "https://cleanmaapp-f2qq.vercel.app/api/:path*" }
   ]
 }
