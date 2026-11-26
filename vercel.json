@@ -4,14 +4,19 @@
   "installCommand": "npm ci",
   "buildCommand": "npm run build",
   "rewrites": [
-    { "source": "/admin", "destination": "https://cleanmaapp-f2qq.vercel.app/admin" },
-    { "source": "/admin/:path*", "destination": "https://cleanmaapp-f2qq.vercel.app/admin/:path*" },
-    { "source": "/cleaner", "destination": "https://cleanmaapp-f2qq.vercel.app/cleaner" },
-    { "source": "/cleaner/:path*", "destination": "https://cleanmaapp-f2qq.vercel.app/cleaner/:path*" },
-    { "source": "/planos", "destination": "https://cleanmaapp-f2qq.vercel.app/planos" },
-    { "source": "/suspended", "destination": "https://cleanmaapp-f2qq.vercel.app/suspended" },
-    { "source": "/auth", "destination": "https://cleanmaapp-f2qq.vercel.app/auth" },
-    { "source": "/assets/:path*", "destination": "https://cleanmaapp-f2qq.vercel.app/assets/:path*" },
-    { "source": "/api/:path*", "destination": "https://cleanmaapp-f2qq.vercel.app/api/:path*" }
+    { "source": "/admin", "destination": "https://origin.cleanmaapp.com/admin" },
+    { "source": "/admin/:path*", "destination": "https://origin.cleanmaapp.com/admin/:path*" },
+    { "source": "/cleaner", "destination": "https://origin.cleanmaapp.com/cleaner" },
+    { "source": "/cleaner/:path*", "destination": "https://origin.cleanmaapp.com/cleaner/:path*" },
+    { "source": "/planos", "destination": "https://origin.cleanmaapp.com/planos" },
+    { "source": "/suspended", "destination": "https://origin.cleanmaapp.com/suspended" },
+    { "source": "/auth", "destination": "https://origin.cleanmaapp.com/auth" },
+    { "source": "/assets/:path*", "destination": "https://origin.cleanmaapp.com/assets/:path*" },
+    { "source": "/api/:path*", "destination": "https://origin.cleanmaapp.com/api/:path*" },
+    { "source": "/cleaner.html", "destination": "https://origin.cleanmaapp.com/cleaner.html" },
+    { "source": "/funcionario", "destination": "https://origin.cleanmaapp.com/funcionario" },
+    { "source": "/client-portal", "destination": "https://origin.cleanmaapp.com/client-portal" },
+    { "source": "/client-payment-result", "destination": "https://origin.cleanmaapp.com/client-payment-result" },
+    { "source": "/cleanma-logo.png", "destination": "https://origin.cleanmaapp.com/cleanma-logo.png" }
   ]
 }
