@@ -9,21 +9,5 @@
     { "source": "/login/cleaner", "destination": "/cleaner/login", "permanent": false },
     { "source": "/subscribe", "destination": "/planos", "permanent": false }
   ],
-  "rewrites": [
-    { "source": "/admin", "destination": "https://cleanmaapp.online/admin" },
-    { "source": "/admin/:path*", "destination": "https://cleanmaapp.online/admin/:path*" },
-    { "source": "/cleaner", "destination": "https://cleanmaapp.online/cleaner" },
-    { "source": "/cleaner/:path*", "destination": "https://cleanmaapp.online/cleaner/:path*" },
-    { "source": "/planos", "destination": "https://cleanmaapp.online/planos" },
-    { "source": "/suspended", "destination": "https://cleanmaapp.online/suspended" },
-    { "source": "/auth", "destination": "https://cleanmaapp.online/auth" },
-    { "source": "/assets/:path*", "destination": "https://cleanmaapp.online/assets/:path*" },
-    { "source": "/api/:path*", "destination": "https://cleanmaapp.online/api/:path*" },
-    { "source": "/login/:path*", "destination": "https://cleanmaapp.online/login/:path*" },
-    { "source": "/cleaner.html", "destination": "https://cleanmaapp.online/cleaner.html" },
-    { "source": "/funcionario", "destination": "https://cleanmaapp.online/funcionario" },
-    { "source": "/client-portal", "destination": "https://cleanmaapp.online/client-portal" },
-    { "source": "/client-payment-result", "destination": "https://cleanmaapp.online/client-payment-result" },
-    { "source": "/cleanma-logo.png", "destination": "https://cleanmaapp.online/cleanma-logo.png" }
-  ]
-}
+  "headers": [
+    
