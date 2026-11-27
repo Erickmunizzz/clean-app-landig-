@@ -149,7 +149,13 @@ h1, h2, h3, h4, h5, h6, strong { color: #0f172a; }
 .nexus-sections .cma-newsletter-consent input { flex: 0 0 16px; margin-top: 4px; accent-color: #2563eb; }
 .nexus-sections .cma-newsletter-trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 .nexus-sections .cma-lead-status[data-state="success"] { color: #166534; padding: 12px; border: 1px solid #bbf7d0; background: #f0fdf4; border-radius: 10px; }
-.nexus-sections .cma-lead-status[data-state="error"] { color: #b91c1c; }
+.nexus-sections .cma-support-center > summary { padding: 3px 0; color: var(--tx2); font-size: .875rem; cursor: pointer; }
+.nexus-sections .cma-support-center > summary:hover { color: var(--pur); }
+.nexus-sections .cma-support-contact { margin: 6px 0 10px; font-size: .78rem; overflow-wrap: anywhere; }
+.nexus-sections .cma-support-contact a { display: block; width: fit-content; max-width: 100%; color: #1d4ed8; font-size: inherit; text-decoration: underline; }
+.nexus-sections .cma-support-contact button { margin-top: 4px; padding: 4px 8px; border: 1px solid #cbd5e1; border-radius: 6px; background: #fff; color: #334155; cursor: pointer; }
+.nexus-sections .cma-support-contact [data-copy-status] { display: block; }
+.nexus-sections .cma-support-contact [data-copy-status]:not(:empty) { margin-top: 4px; }
 .nexus-sections .cma-newsletter button:disabled { opacity: .65; cursor: wait; }
 
 /* The Cleaner App follows the existing cards and scroll reveal system. */

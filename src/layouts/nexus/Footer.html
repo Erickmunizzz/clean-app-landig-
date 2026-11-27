@@ -11,13 +11,25 @@
                         <div class="cma-newsletter-fields"><input class="nli" id="cma-lead-email" name="email" type="email" autocomplete="email" maxlength="254" required placeholder="Your business email"><button class="bgrd btn" type="submit">Subscribe</button></div>
                         <div class="cma-newsletter-trap" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
                         <label class="cma-newsletter-consent"><input name="consent" type="checkbox" required> <span>I agree to receive CleanMa tips and offers. I can unsubscribe at any time.</span></label>
-                        <p id="cma-lead-status" class="cma-lead-status" role="status" aria-live="polite"></p>
+                        <p id="cma-lead-status" class="cma-lead-status" role="status"></p>
+                        <div class="cma-support-contact" data-support-contact id="cma-newsletter-contact" hidden>
+                           <a href="mailto:support@cleanmaapp.com?subject=CleanMa%20newsletter">support@cleanmaapp.com</a>
+                           <button type="button" data-copy-email>Copy email</button>
+                           <span role="status" data-copy-status></span>
+                        </div>
                      </form>
                   </div>
                   <div class="col-6 col-md-2 fcol">
                      <h5>Support</h5>
                      <a href="/#features">User Guides</a>
-                     <a href="mailto:contact@cleanmaapp.com">Support Center</a>
+                     <details class="cma-support-center">
+                        <summary>Support Center</summary>
+                        <div class="cma-support-contact" data-support-contact>
+                           <a href="mailto:support@cleanmaapp.com">support@cleanmaapp.com</a>
+                           <button type="button" data-copy-email>Copy email</button>
+                           <span role="status" data-copy-status></span>
+                        </div>
+                     </details>
                      <a href="/#videoPlayer">Getting Started</a>
                      <a href="/migration">Data Migration</a>
                   </div>
